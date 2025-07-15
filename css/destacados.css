@@ -1,4 +1,3 @@
-/* === Sección MAS VENDIDOS === */
 .mas-vendidos {
   padding: 4rem 2rem;
   text-align: center;
@@ -11,25 +10,23 @@
   color: var(--color-text);
   letter-spacing: 1px;
   text-transform: uppercase;
-  text-decoration: none; /* Quita cualquier línea */
-  border: none;          /* Elimina bordes */
+  text-decoration: none;
+  border: none;
 }
 
-/* === Contenedor de productos en fila única === */
 .productos-grid {
   display: flex;
   flex-wrap: nowrap;
   justify-content: center;
   gap: 3rem;
   overflow-x: auto;
-  overflow-y: visible;   /* Permite que sobresalga hacia arriba */
+  overflow-y: visible;  
   padding: 1rem 0 1rem;  
   scroll-snap-type: x mandatory;
   scroll-behavior: smooth;
   max-width: 100%;
 }
 
-/* === Tarjeta de producto === */
 .producto {
   flex: 0 0 320px;
   background: var(--color-background);
@@ -38,9 +35,9 @@
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   scroll-snap-align: start;
-  display: block;         /* Para que pueda ser <a> si quieres */
-  text-decoration: none;  /* Sin subrayado en toda la tarjeta */
-  color: inherit;         /* Hereda color del texto */
+  display: block;        
+  text-decoration: none; 
+  color: inherit;      
   cursor: pointer;
 }
 
@@ -111,9 +108,9 @@
 
 .producto .precio {
   margin-top: 0.9rem;
-  display: flex; /* Para alinear precios en línea */
-  align-items: center; /* Centra verticalmente */
-  gap: 0.5rem; /* Espacio entre precios */
+  display: flex; 
+  align-items: center; 
+  gap: 0.5rem; 
 }
 
 .producto .talles {
@@ -126,10 +123,10 @@
 
 .old-price {
   text-decoration: line-through;
-  color: #888; /* Color gris para el precio tachado */
+  color: #888; 
 }
 
 .current-price {
-  color: var(--color-text); /* O pon el color que prefieras */
+  color: var(--color-text);
   font-weight: bold;
 }

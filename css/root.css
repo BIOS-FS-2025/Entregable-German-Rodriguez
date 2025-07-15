@@ -8,17 +8,16 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* VARIABLES GLOBALES */
 :root {
   /* Colores principales */
   --color-background: #ffffff; /* Fondo navbar */
   --color-text: #000000;       /* Texto principal */
   --color-hover: #555555;      /* Hover gris oscuro */
 
-  /* Colores secundarios (opcional) */
-  --color-accent: #f5f5f5;     /* Fondo alterno, por ejemplo para hover de dropdowns */
-  --color-border: #dddddd;     /* Bordes sutiles */
-  --color-success: #28a745;    /* Verde para botones de confirmación */
+  /* Colores secundarios */
+  --color-accent: #f5f5f5;     /* Fondo alterno, por ejemplo para hover */
+  --color-border: #dddddd;     /* Bordes */
+  --color-success: #28a745;    /* Verde para botones */
   --color-error: #dc3545;      /* Rojo para alertas */
   --color-shadow: rgba(0, 0, 0, 0.2);
 }
