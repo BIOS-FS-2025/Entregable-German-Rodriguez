@@ -1,18 +1,45 @@
 .banner {
+  position: relative;
   width: 100%;
   height: 865px;
-  background: url('../recursos/Banner Horizontal Promoción Tienda Online Moderno Elegante Marrón, Beis y Blanco.png') center center/cover no-repeat;
-  position: relative;
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../recursos/Banner\ Horizontal\ Promoción\ Tienda\ Online\ Moderno\ Elegante\ Marrón\,\ Beis\ y\ Blanco.png') center center/cover no-repeat;
+  z-index: 0;
+  opacity: 1;
+  transition: opacity 0.8s ease;
+}
+
+body.tema-oscuro .banner::before {
+  opacity: 0;
+}
+
+.banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url('../recursos/THE-LINE-WINTER.jpg') center center/cover no-repeat;
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
+
+body.tema-oscuro .banner::after {
+  opacity: 1;
 }
 
 .banner-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
 
@@ -35,15 +62,15 @@
 }
 
 .banner-content p {
-    text-transform: uppercase;
-    font-size: 1.5rem;
-    margin-bottom: 80px;
-    font-weight: 500;
-    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  margin-bottom: 80px;
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
 }
 
 .banner-btn {
-    display: inline-block;
+  display: inline-block;
   padding: 14px 38px;
   background: transparent;
   color: #fff;
