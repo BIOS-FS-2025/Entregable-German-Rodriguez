@@ -87,3 +87,7 @@ body.tema-oscuro .banner::after {
   background: #fff;
   color: #000;
 }
+
+body.tema-oscuro .banner-btn:hover {
+  color: #000;
+}
