@@ -1,0 +1,159 @@
+/* navbar */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-background);
+  padding: 0px 60px;
+  min-height: 70px;
+}
+
+/* logo y categorias */
+.logo-categorias {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+/* logo */
+.logo img {
+  height: 90px;
+}
+
+body.tema-oscuro .logo img {
+  filter: invert(1) brightness(2);
+  transition: filter 0.3s;
+}
+
+/* categorias */
+.nav-categorias {
+  list-style: none;
+  display: flex;
+  gap: 50px;
+}
+
+.nav-categorias li a {
+  display: inline-block;
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease;
+}
+
+.nav-categorias li a:hover {
+  color: var(--color-hover);
+  transform: scale(1.1);
+}
+
+/* iconos */
+.iconos {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconos a {
+  color: var(--color-text);
+  font-size: 1.4rem;
+  padding: 15px;
+  border-radius: 50%;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.iconos a:hover {
+  color: var(--color-hover);
+}
+
+.iconos a i {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.iconos a:hover i {
+  transform: scale(1.2);
+}
+
+/* Submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--color-background);
+  padding: 20px 0;
+  min-width: 380px;
+  max-width: 520px;
+  z-index: 100;
+  border-radius: 0 0 10px 10px;
+  box-shadow: none;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 0;
+}
+
+/* Mostrar submenu */
+.nav-categorias li {
+  position: relative;
+}
+
+.nav-categorias li:hover > .submenu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px 0;
+}
+
+.submenu li {
+  list-style: none;
+}
+
+.submenu li a {
+  display: block;
+  padding: 14px 24px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s, transform 0.2s;
+  font-weight: 500;
+  margin: 0;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.submenu li a:hover {
+  color: var(--color-hover);
+  transform: scale(1.1);
+}
+
+/* Tema toggle */
+.tema-toggle button {
+  padding: 15px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  transition: transform 0.3s ease;
+  transform: scale(1.2);
+}
+
+.tema-toggle button:hover {
+  color: var(--color-hover);
+  transform: scale(1.4);
+}
+
+#temaIcono {
+  font-size: 1.4rem; /* Igual que los otros iconos */
+  color: #fff; /* El sol será blanco */
+  transition: color 0.3s;
+}
+
+body:not(.tema-oscuro) #temaIcono {
+  color: var(--color-text); /* Luna igual que otros iconos en claro */
+}
+
+body.tema-oscuro #temaIcono.fa-sun {
+  color: #fff; /* Sol blanco en oscuro */
+}

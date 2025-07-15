@@ -1,0 +1,135 @@
+/* === Sección MAS VENDIDOS === */
+.mas-vendidos {
+  padding: 4rem 2rem;
+  text-align: center;
+  background: var(--color-accent);
+}
+
+.mas-vendidos h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--color-text);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none; /* Quita cualquier línea */
+  border: none;          /* Elimina bordes */
+}
+
+/* === Contenedor de productos en fila única === */
+.productos-grid {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 3rem;
+  overflow-x: auto;
+  overflow-y: visible;   /* Permite que sobresalga hacia arriba */
+  padding: 1rem 0 1rem;  
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  max-width: 100%;
+}
+
+/* === Tarjeta de producto === */
+.producto {
+  flex: 0 0 320px;
+  background: var(--color-background);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+  display: block;         /* Para que pueda ser <a> si quieres */
+  text-decoration: none;  /* Sin subrayado en toda la tarjeta */
+  color: inherit;         /* Hereda color del texto */
+  cursor: pointer;
+}
+
+.producto:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 4px 12px var(--color-shadow);
+}
+
+.producto .img-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.producto img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px 12px 0 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.producto:hover .img-hover {
+  opacity: 1;
+}
+
+.producto:hover .img-default {
+  opacity: 0;
+}
+
+.producto h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.3rem;
+  color: var(--color-text);
+  text-decoration: none;
+  border: none;
+}
+
+.producto .talles,
+.producto .precio {
+  margin: 0.3rem 0;
+  color: var(--color-hover);
+  font-size: 1rem;
+  text-decoration: none;
+  border: none;
+}
+
+.producto .precio {
+  color: var(--color-text);
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+}
+
+.producto h3,
+.producto .talles,
+.producto .precio {
+  text-align: left;
+  margin: 10px;
+}
+
+.producto .precio {
+  margin-top: 0.9rem;
+  display: flex; /* Para alinear precios en línea */
+  align-items: center; /* Centra verticalmente */
+  gap: 0.5rem; /* Espacio entre precios */
+}
+
+.producto .talles {
+  margin-top: 0.9rem;
+}
+
+.producto h3 {
+  margin-top: 0.9rem;
+}
+
+.old-price {
+  text-decoration: line-through;
+  color: #888; /* Color gris para el precio tachado */
+}
+
+.current-price {
+  color: var(--color-text); /* O pon el color que prefieras */
+  font-weight: bold;
+}

@@ -1,0 +1,7 @@
+body {
+  background: #fff;
+}
+
+body.tema-oscuro {
+  background: #111;
+}
